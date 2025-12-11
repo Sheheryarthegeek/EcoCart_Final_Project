@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCart – Sustainable Products</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="images/hero.png" as="image" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="images/logo.png" alt="EcoCart Logo" />
+          <h1>EcoCart</h1>
+        </div>
+
+        <nav class="header__nav" role="navigation" aria-label="Main Navigation">
+          <a href="index.html" aria-label="Home">Home</a>
+          <a href="products.html" aria-label="Products">Products</a>
+          <a href="about.html" aria-label="About">About</a>
+          <a href="contact.html" aria-label="Contacts">Contact</a>
+
+          <!-- Cart icon -->
+          <a href="cart.html" class="cart-link">
+            🛒 <span id="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+      <!-- end header container -->
+    </header>
+    <!-- HEADER END -->
+
+    <main class="about-page">
+      <section class="about-hero">
+        <div class="about-hero__content">
+          <h2>About EcoCart</h2>
+          <p>
+            EcoCart is a student project showcasing sustainable and low-impact
+            products. Our goal is to encourage small changes that add up —
+            reusable goods, plastic-free alternatives, and natural cleaning
+            solutions.
+          </p>
+          <a href="products.html" class="hero__btn">Browse Products</a>
+        </div>
+
+        <div class="about-hero__image">
+          <img
+            src="images/about-hero.png"
+            alt="Sustainable products illustration"
+          />
+        </div>
+      </section>
+
+      <section class="about-values">
+        <h3>Our Values</h3>
+
+        <div class="values-grid">
+          <div class="value">
+            <h4>Planet First</h4>
+            <p>
+              We prioritize products that reduce waste and lower environmental
+              impact.
+            </p>
+          </div>
+
+          <div class="value">
+            <h4>Transparent</h4>
+            <p>
+              We explain why products are sustainable, with clear badges and
+              descriptions.
+            </p>
+          </div>
+
+          <div class="value">
+            <h4>Community</h4>
+            <p>
+              EcoCart is built for people who care — we aim to make sustainable
+              choices easy and affordable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-team">
+        <h3>Team</h3>
+        <div class="team-grid">
+          <div class="team-card">
+            <img src="images/team/sheheryar.jpg" alt="Sheheryar" />
+            <h5>Sheheryar A. Khan</h5>
+            <p>Frontend & Project Lead</p>
+          </div>
+
+          <div class="team-card">
+            <img src="images/team/Aiman.png" alt="Aiman" />
+            <h5>Aiman Shaikh</h5>
+            <p>Design & UX</p>
+          </div>
+
+          <div class="team-card">
+            <img src="images/team/hawra.jpg" alt="Hawra" />
+            <h5>Hawra Abbas</h5>
+            <p>Content & Testing</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- script tags  -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

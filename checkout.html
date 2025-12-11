@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EcoCart — Checkout</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="images/hero.png" as="image" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="images/logo.png" alt="EcoCart Logo" />
+          <h1>EcoCart</h1>
+        </div>
+
+        <nav class="header__nav" role="navigation" aria-label="Main Navigation">
+          <a href="index.html" aria-label="Home">Home</a>
+          <a href="products.html" aria-label="Products">Products</a>
+          <a href="about.html" aria-label="About">About</a>
+          <a href="contact.html" aria-label="Contacts">Contact</a>
+
+          <!-- Cart icon -->
+          <a href="cart.html" class="cart-link">
+            🛒 <span id="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="checkout-page">
+      <h2 class="section-title">Checkout</h2>
+
+      <div class="checkout-layout">
+        <!-- Order summary -->
+        <aside class="order-summary" id="orderSummary">
+          <!-- JS will populate this -->
+        </aside>
+
+        <!-- Checkout form -->
+        <section class="checkout-form-wrap">
+          <form id="checkoutForm" novalidate>
+            <div class="form-row">
+              <label for="c_name">Full name</label>
+              <input
+                id="c_name"
+                name="name"
+                required
+                placeholder="Your full name"
+              />
+              <small class="error" id="err-c-name"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="c_email">Email</label>
+              <input
+                id="c_email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+              />
+              <small class="error" id="err-c-email"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="c_address">Shipping address</label>
+              <textarea
+                id="c_address"
+                name="address"
+                rows="3"
+                required
+                placeholder="Address, city, postal code"
+              ></textarea>
+              <small class="error" id="err-c-address"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="c_payment">Payment method</label>
+              <select id="c_payment" name="payment">
+                <option value="card">Card</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <button id="submitCheckout" class="hero__btn" type="submit">
+                Place Order
+              </button>
+            </div>
+
+            <div
+              id="checkoutSuccess"
+              class="contact-success"
+              aria-live="polite"
+              hidden
+            >
+              <!-- success markup injected by JS -->
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- scripts: product data, cart logic, UI logic -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCart – Sustainable Products</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="images/hero.png" as="image" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="images/logo.png" alt="EcoCart Logo" />
+          <h1>EcoCart</h1>
+        </div>
+
+        <nav class="header__nav" role="navigation" aria-label="Main Navigation">
+          <a href="index.html" aria-label="Home">Home</a>
+          <a href="products.html" aria-label="Products">Products</a>
+          <a href="about.html" aria-label="About">About</a>
+          <a href="contact.html" aria-label="Contacts">Contact</a>
+
+          <!-- Cart icon -->
+          <a href="cart.html" class="cart-link">
+            🛒 <span id="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+      <!-- end header container -->
+    </header>
+    <!-- HEADER END -->
+
+    <!-- PRODUCTS PAGE -->
+    <section class="products-page">
+      <!-- FILTER BAR -->
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="Kitchen">Kitchen</option>
+          <option value="Bathroom">Bathroom</option>
+          <option value="Lifestyle">Lifestyle</option>
+          <option value="Cleaning">Cleaning</option>
+        </select>
+
+        <select id="badgeFilter">
+          <option value="">Eco Badges</option>
+          <option value="plastic-free">Plastic-Free</option>
+          <option value="organic">Organic</option>
+          <option value="reusable">Reusable</option>
+          <option value="biodegradable">Biodegradable</option>
+        </select>
+
+        <input type="number" id="minPrice" placeholder="Min Price" />
+        <input type="number" id="maxPrice" placeholder="Max Price" />
+
+        <select id="sortBy">
+          <option value="">Sort By</option>
+          <option value="low-high">Price: Low → High</option>
+          <option value="high-low">Price: High → Low</option>
+        </select>
+      </div>
+
+      <!-- PRODUCT GRID - JS will render here -->
+      <div id="productsContainer" class="product-grid"></div>
+    </section>
+
+    <script src="js/products.js"></script>
+    <!-- product data -->
+    <script src="js/cart.js"></script>
+    <!-- cart logic -->
+    <script src="js/main.js"></script>
+    <!-- UI + render logic -->
+  </body>
+</html>

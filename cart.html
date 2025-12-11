@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCart – Sustainable Products</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="images/hero.png" as="image" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="images/logo.png" alt="EcoCart Logo" />
+          <h1>EcoCart</h1>
+        </div>
+
+        <nav class="header__nav" role="navigation" aria-label="Main Navigation">
+          <a href="index.html" aria-label="Home">Home</a>
+          <a href="products.html" aria-label="Products">Products</a>
+          <a href="about.html" aria-label="About">About</a>
+          <a href="contact.html" aria-label="Contacts">Contact</a>
+
+          <!-- Cart icon -->
+          <a href="cart.html" class="cart-link">
+            🛒 <span id="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+      <!-- end header container -->
+    </header>
+    <!-- HEADER END -->
+
+    <main class="cart-page">
+      <h2 class="section-title">Your Cart</h2>
+      <div id="cartContainer"></div>
+    </main>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
